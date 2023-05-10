@@ -27,7 +27,7 @@ const InputField: React.FC<InputProps> = ({ todo, setTodo, handleClick }) => {
         className="input__box"
       />
       <button className="input__submit" type="submit">
-        Go
+        PUSH
       </button>
     </form>
   );
