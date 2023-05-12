@@ -8,13 +8,14 @@ interface InputProps {
 }
 
 const InputField: React.FC<InputProps> = ({ todo, setTodo, handleClick }) => {
+
+  //useref with ts
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
     <form className="input" onSubmit={(e) => {
         handleClick(e)
         inputRef.current?.blur()
-
         }}>
 
 

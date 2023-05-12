@@ -28,14 +28,14 @@
   border-radius: 50px;
   right: 0;
   color: aliceblue;
-  background-color: #64748b;
+  background-color: #b39f76;
   border: none;
   transition: 0.3s;
   box-shadow: 0 0 10px black;
   cursor: pointer;
 }
 .input__submit:hover {
-  background-color: #64748b;
+  background-color: #44403c;
 }
 .input__submit:active {
   transform: scale(0.7);
@@ -44,22 +44,32 @@
 
 .todos {
   display: flex;
-  align-items: center;
+  width: 47.5%;
+  padding: 1rem;
+  border-radius: 1rem;
   flex-direction: column;
-  justify-content: space-evenly;
-  width: 90%;
-  flex-wrap: wrap;
+  background-color: #b39f76;
+}
+
+.remove{
+  background-color: #5e4f32;
+
 }
 
 .todos__single {
   display: flex;
   align-items: center;
-  width: 29.5%;
   border-radius: 5px;
   padding: 20px;
   margin-top: 15px;
   background: url("https://img.freepik.com/free-photo/ripped-paper-brown-background-earth-tone-handmade-craft_53876-134116.jpg?w=1380&t=st=1683720203~exp=1683720803~hmac=e49753dce78b2965d4da965b1e79686261a909f37b9c5357e2450265e96c62ea");
   background-position-y: -50px;
+  transition: 0.3s;
+}
+
+.todos__single:hover {
+  box-shadow: 0 0 5px black;
+  transform: scale(1.02);
 }
 
 .todos__single--text {
@@ -67,6 +77,9 @@
   padding: 5px;
   border: none;
   font-size: 20px;
+}
+.todos__single--text:focus {
+  outline: none;
 }
 
 .icon {
@@ -76,9 +89,24 @@
   color: aliceblue;
 }
 
+.container {
+  display: flex;
+  width: 90%;
+  gap: 1rem;
+
+  margin: 1rem 0;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.todos__heading {
+  font-size: 2rem;
+  color: #fafaf9;
+}
+
 @media (max-width: 1000px) {
-  .todos__single {
-    width: 50%;
+  .todos {
+    width: 45%;
   }
 }
 
@@ -86,7 +114,12 @@
   .todos {
     flex-direction: column;
     justify-content: center;
-}
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .input {
     width: 95%;
@@ -94,8 +127,5 @@
 
   .todos {
     width: 85%;
-  }
-  .todos__single {
-    width: 100%;
   }
 }
