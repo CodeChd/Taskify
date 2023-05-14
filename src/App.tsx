@@ -19,6 +19,8 @@ const App: React.FC = () => {
     }
   };
 
+
+  //draggable config
   const onDragEnd = (result: DropResult) => {
     let add;
     const active = todos;
